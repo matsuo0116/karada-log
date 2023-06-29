@@ -1,0 +1,1158 @@
+$main_color:#F98930 ;
+$bg_color:#FAF8F1;
+$green: #A4D555;
+$border: #ccc;
+
+a{
+  cursor: pointer;
+}
+button {
+  cursor: pointer;
+  transition: 0.2s;
+}
+input[type="submit"] {
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+
+input[type="checkbox"] {
+
+  all: revert;
+}
+input::placeholder {
+  color: #aaa;
+}
+[v-cloak] {
+  display: none;
+}
+
+body{
+  background: #fff;
+  line-height:1;
+  font-size: 16px;
+  // overflow-x: hidden;
+  font-family: 'Hiragino Sans','Yu Gothic', sans-serif;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+// ヘッダー
+.header {
+  z-index: 23;
+  display: flex;
+  position: fixed;
+  top:0px;
+  width:100%;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 5vw;
+  background-color:$main_color;
+  color: white;
+  h1{
+    width: 140px;
+  }
+  .login_link {
+    font-size:14px;
+  }
+  p {
+    max-width: 10rem;
+    font-size: 14px;
+  }
+  
+}
+
+//ナビゲーション
+nav{
+  background-color: $bg_color;
+  padding:0 5vw;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  z-index: 21;
+
+  ul {
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+
+    li {
+      font-size: 16px;
+      font-weight: bold;
+      color: #999;
+
+      .current{
+        color:$main_color;
+      }
+      
+      a{
+        padding:20px 8px;
+        display: block;
+        transition: 0.2s;
+      }
+      a:hover{
+        opacity: 0.7;
+      }
+    }
+  }
+}
+
+// トップページ
+main{
+  position: relative;
+  z-index: 20;
+  margin:0 auto 0;
+
+  .tabgroup {
+    
+  .tabnav {
+    position: sticky;
+    top: 0;
+    display: flex;
+    border-bottom: 1px $main_color solid ;
+    padding:0 5vw;
+    
+    z-index: 11;
+    background-color: #fff;
+    li{
+      width: 50%;
+      text-align: center;
+      padding: 10px 0 8px;
+      color: #aaa;
+      cursor: pointer;
+    }
+
+    li.active {
+      border: 1px solid $main_color;
+      background-color: $main_color;
+      color: #fff;
+      border-top-left-radius: 16px;
+      border-top-right-radius: 16px;
+      font-weight: bold;
+    }
+  }
+}
+
+  .tabcontent {
+    width: 100%;
+    margin: 0 auto;
+    
+
+    .log_list > li{
+
+      padding:24px 5vw;
+      border-bottom: 1px solid $border;
+      
+
+      h3{
+        font-weight: bold;
+        margin-top: 12px;
+        margin-bottom: 8px;
+      }
+       
+      p{
+        line-height: 1.2;
+      }
+      .training_list{
+        margin-bottom: 8px;
+        li {
+          list-style: square;
+          position: relative;
+          left: 16px;
+          margin-bottom: 4px;
+        }
+      }
+      
+      
+    }
+  }
+  #my_log h2{
+    font-size: 18px;
+    font-weight: bold;
+    color: $main_color;
+    
+  }
+  #timeline {
+    
+    
+    .log_link {
+      display: flex;
+      width: 100%;
+      justify-content: space-between;
+      margin-bottom: 8px;
+    
+      .text {
+        width:82%;
+      }
+      .log_user {
+        display: flex;
+        justify-content: space-between;
+
+        p{
+          font-weight: bold;
+          // margin-bottom: 8px;
+        }
+        
+
+        span{
+          font-weight: normal;
+          font-size: 12px;
+          color: #7b7b7b;
+        }
+      }
+    }
+
+    
+
+    
+  }
+}
+.prof_img{
+  border-radius: 50%;
+  object-fit: cover;
+  width:48px;
+  height:48px;
+}
+
+.login_message{
+  padding: 0 5vw;
+  font-size: 14px;
+  color: #7b7b7b;
+  margin-bottom: 16px;
+}
+// いいねボタン
+#like{
+  text-align: right;
+  font-size: 12px;
+
+  .like-button{
+    cursor:pointer;
+    border-radius: 4px;
+    padding:4px 6px;
+    margin-right: 4px;
+  }
+  .like {
+    background-color: rgb(229, 70, 96);
+    border: 1px solid  rgb(229, 70, 96);
+    color: white;
+    
+  }
+  .dislike {
+    color: rgb(229, 70, 96);
+    border: 1px solid  rgb(229, 70, 96);
+    background-color: white;
+  }
+  span{
+    color:#7b7b7b;
+  }
+  
+}
+
+#top {
+  main {
+    margin-bottom: 0;
+  }
+  .tabnav {
+    position: sticky;
+    top: 0;
+    padding-top: 100px;
+  }
+  .tabcontent {
+    margin-bottom: 60px;
+  }
+
+  .green_btn {
+    display: block;
+    text-align: center;
+    line-height: 1.5;
+    width: 80%;
+    margin:0 auto;
+    transition: 0.2s;
+    // position: absolute;
+    // top:50%;
+    // left: 50%;
+  }
+  .welcome_message {
+    font-weight: bold;
+    text-align: center;
+    font-size: 16px;
+    width:80% ;
+    background-color: $bg_color;
+    padding: 24px;
+    color: $main_color;
+    margin: 150px auto 24px;
+    line-height: 1.6;
+  }
+  
+
+}
+.encourage .window_content{
+  text-align: center;
+  padding-bottom:24px;
+  border-radius: 8px;
+  h3 {
+    color:$green;
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 18px;
+  }
+  p {
+    // margin-bottom: ;
+    line-height: 1.5;
+  }
+  .highlight {
+    font-weight: bold;
+  }
+  .max_weight {
+    margin-bottom: 16px;
+  }
+}
+
+.circle_link {
+  width: 40px;
+  height: 40px;
+  position: fixed;
+  .green_btn {
+    margin: auto;
+    border-radius: 50%;
+    width: 100%;
+    padding:10px 0;
+    line-height: 1;
+    font-weight: bold;
+    font-size: 20px;
+    text-align: center;
+    display: block;
+  }
+}
+.new_log{
+  bottom:100px;
+  right: 20px;
+  z-index: 10;
+
+} 
+.new_log_link {
+  .green_btn{
+    display: block;
+    padding: 1rem;
+    text-align: center;
+  }
+}
+.notification {
+  right: 20px;
+  bottom: 160px;
+  z-index: 10;
+  a {
+
+  }
+  .inform::after {
+    position: absolute;
+    content: '';
+    width:10px;
+    height:10px;
+    background-color: #F02323;
+    top:2px;
+    right:2px;
+    margin: auto;
+    border-radius:50%;
+    border:1px solid #fff;
+  }
+}
+.new_log_link {
+  .green_btn {
+    margin: 16px auto 16px;
+    border-radius: 32px;
+  }
+}
+
+
+//通知ページ
+#notification {
+  margin-top: 96px;
+  h2{
+    font-size: 20px;
+    font-weight: bold;
+    width: 90%;
+    margin: 0 auto 24px;
+  }
+  p {
+    padding: 20px 5%;
+    border-bottom: 1px solid $border;
+    span {
+      margin-top: 1rem;
+      display: inline-block;
+      color: #666;
+    }
+  }
+}
+//投稿詳細ページ
+#detail {
+  // width: 90%;
+  // margin: 0 auto;
+  padding: 0 5vw;
+  margin-top: 88px;
+
+  .content{
+    display: flex;
+    margin-bottom: 16px;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 16px;
+
+    .icon {
+      margin-right:8px;
+    }
+    .user_name{
+      font-weight: bold;
+      margin-bottom: 12px;
+    }
+    .log_body_info {
+      margin-bottom: 1rem;
+    }
+    .training_list li {
+      list-style: square;
+      position: relative;
+      left: 16px;
+      line-height: 1.4;
+    }
+    .log_comment {
+      margin-top: 12px;
+    }
+  }
+  
+  .comment_area{
+    form {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 20px;
+    }
+    .comment_form {
+      border: 1px solid #ddd;
+      padding: 0.5rem;
+      font-size: 14px;
+      width:272px;
+      &::placeholder {
+        color: #aaa;
+      }
+    }
+
+    .comment_list li{
+      display: flex;
+      margin-bottom: 20px;
+      .user_img {
+        margin-right: 8px;
+      }
+      .user_name {
+        font-weight: bold;
+        margin-bottom:8px;
+      }
+    }
+  }
+   
+  
+
+  .sub_info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 24px;
+
+    .log_time {
+      font-size: 14px;
+      color: #666;
+    }
+  }
+
+
+}
+.green_btn {
+  background-color: $green;
+  color: #fff;
+  padding: 10px 1rem;
+  border-radius: 4px;
+  border:none;
+}
+//トレーニング記録ページ
+#training{
+  padding-top: 90px;
+  margin-bottom: 60px;
+}
+.today {
+  color: $main_color;
+  font-weight: bold;
+  font-size:18px;
+  text-align: center;
+  margin-bottom: 16px;
+}
+#training .tabcontent-list {
+  padding: 16px 5vw;
+}
+.training_group {
+  background: $bg_color;
+  margin-bottom: 16px;
+  border-radius: 5px;
+  padding:24px 24px 16px;
+
+  h3 {
+    font-size: 20px;
+    font-weight: bold;
+    padding:0;
+    margin-bottom: 24px;
+  }
+  
+  .type_name {
+    margin-bottom: 16px;
+  }
+  .type_list {
+    // padding:0 24px;
+  }
+  input {
+    background-color: #fff;
+    border:1px solid #ddd;
+    font-weight: bold;
+  }
+
+  .form_item_list {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 0;
+    height: 0;
+    overflow: hidden;
+    transition: 0.3s;
+  }
+  
+  .open {
+    height: 64px;
+    padding-bottom: 16px;
+    margin-bottom:16px;
+    border-bottom: 1px dotted #ccc;
+  }
+  .form_item_list:last-child {
+    border: none;
+    margin: 0;
+    padding-bottom: 0;
+  }
+  .form_item{
+    display: flex;
+    align-items: center;
+    margin-left: 16px;
+    input{
+      width: 56px;
+      font-size: 18px;
+      padding:8px;
+      text-align: right;
+      display: flex;
+      margin-right: 4px;
+    }
+    span{
+      font-size: 12px;
+      color: #666 ;
+    }
+  }
+
+}
+.training_comment {
+  width: 90%;
+  margin: 0 auto;
+  padding-bottom: 32px;
+
+  .green_btn {
+    display: block;
+    font-size: 18px;
+    border-radius: 40px;
+    padding: 1rem 2rem;
+    margin: 24px auto 0;
+  }
+  .log_comment {
+    border: 1px solid #ccc;
+    width: 100%;
+    height: 120px;
+    padding: 0.5rem;
+    border-radius: 4px;
+  }
+}
+
+//アコーディオンメニュー
+.open-form{
+  // display: block;
+}
+
+//カラダログ記録ページ
+#body {
+  width: 90%;
+  margin:90px auto 80px;
+
+  .log_complete {
+    border: 1px solid $main_color;
+    padding: 1rem;
+    margin-bottom: 16px;
+    border-radius: 4px;
+    
+    p {
+      line-height: 1.8;
+      text-align: center;
+      span {
+        font-weight: bold;
+      }
+    }
+    .message{
+      font-weight: bold;
+      color: $main_color;
+      
+    }
+  }
+
+  .error_message {
+    width: 100%;
+    margin-bottom: 16px;
+  }
+}
+.body_info {
+  background-color: $bg_color;
+  padding: 24px 24px 32px;
+  margin-bottom: 32px;
+  border-radius: 4px;
+  .green_btn{
+    display: block;
+    margin: 32px auto 0;
+    padding: 1rem 1.5rem;
+  }
+}
+
+.chart {
+  margin-bottom: 32px;
+}
+
+
+.info_list {
+  position: relative;
+  
+  h3 {
+    position: absolute;
+    top:0;
+    left:0;
+    background-color: #fff;
+    color: #F5CE28;
+    border:1px solid #F5CE28;
+    padding:0.5rem 1rem ;
+    border-radius: 6px;
+    font-weight: bold;
+  }
+  p {
+    text-align: right;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 130px;
+    margin-left: auto;
+    margin-bottom: 16px;
+  }
+  input {
+    background-color: #fff;
+    border:1px solid #ddd;
+    font-weight: bold;
+    font-size: 18px;
+    padding: 8px;
+    width: 4rem;
+  }
+  span.unit {
+    font-size: 12px;
+    color: #666 ;
+    text-align: right;
+  }
+  span.red_text{
+    color: #F02323;
+    font-weight: bold;
+    font-size: 24px;
+  }
+  .log_form{
+    // width:130px;
+  }
+}
+.target_info {
+  margin-bottom: 20px;
+  // padding-bottom: 20px;
+  border-bottom: 1px dotted #ccc;
+  
+
+  h3 {
+    color:$green;
+    border:1px solid $green;
+  }
+}
+//フォームエラーメッセージ
+.error_message{
+  width: 90%;
+  margin: 16px auto 0;
+  background: #f6e9e9;
+  color: #F02323;
+  padding: 12px 16px;
+  line-height: 1.5;
+}
+
+//設定ページ
+#setting {
+  width: 90%;
+  margin-top: 90px;
+  margin-bottom: 80px;
+  // margin: 0 auto;
+  input[type="text"] ,
+  input[type="email"] ,
+  input[type="password"] {
+    background-color: #fff;
+    border:1px solid #ddd;
+    padding: 8px;
+  }
+  .sub_title {
+    font-size: 18px;
+    color: #666;
+    font-weight: bold;
+    margin-bottom: 12px;
+  }
+  .setting_group {
+    background-color: $bg_color;
+    margin-bottom: 32px;
+    padding: 24px;
+  }
+  .setting_avatar{
+    // display: flex;
+    // justify-content: space-between;
+    text-align: center;
+    .prof_img {
+      width: 72px;
+      height: 72px;
+      margin-bottom: 16px;
+    }
+    
+  }
+  .green_btn{
+    display: block;
+    margin: 16px auto;
+  }
+  .error_message{
+    font-size: 14px;
+    background: none;
+    padding: initial;
+    margin: 0px auto 16px;
+    width: auto;
+    text-align: left;
+  }
+  .current_avatar {
+    // display: flex;
+    // align-items: center;
+    // justify-content: flex-start;
+    // width: 70%;
+    // margin: 0 auto;
+    p {
+      // margin-right: 24px;
+      margin-bottom: 16px;
+    }
+  }
+  .form_item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 4px;
+    border-top: 1px dotted #ccc;
+    padding-top: 16px;
+    margin-top: 16px;
+    input {
+      width: 72px;
+      text-align: left;
+    }
+    .form_item:last-child{
+      border-bottom: 1px dotted #ccc;
+      padding-bottom: 16px;
+    }
+  }
+  .annotation {
+    text-align: right;
+    font-size: 12px;
+    color: #666;
+    margin-bottom: 16px;
+    
+  }
+  .image_choice{
+    width:100%;
+  }
+}
+#account {
+  section {
+    margin-bottom: 40px;
+  }
+  h2 {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 18px;
+  }
+  .form_item {
+    display: block;
+    
+  }
+  input[type="text"] ,
+  input[type="email"] ,
+  input[type="password"] {
+    width: 100%;
+    margin-top: 16px;
+  }
+}
+.red_btn {
+  background-color: #F02323;
+  color: #fff;
+  padding: 10px 1rem;
+  border-radius: 4px;
+  display: block;
+    margin: 0 auto;
+}
+
+.window {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top:0;
+  left:0;
+  transition: 0.2s;
+  animation: modal-001-animation .6s;
+  z-index: 11;
+  .window_bg {
+    background: rgba(0,0,0,.6);
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    z-index: 10;
+  }
+  .window_content {
+    width:80vw;
+    height: auto;
+    background-color: $bg_color;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    z-index: 11;
+    padding:24px 24px 12px;
+  }
+  @keyframes modal-001-animation {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+  }
+
+}
+.delete_confirm {
+  p{
+    line-height: 1.5;
+    font-size: 14px;
+    margin-bottom: 16px;
+  }
+  button {
+    text-align: center;
+  }
+  label {
+    font-size: 14px;
+  }
+  input[type=password] {
+    margin-top: 8px;
+    margin-bottom: 16px;
+  }
+  .red_btn{
+    width:160px;
+    margin-bottom: 16px;
+  }
+  .green_btn {
+    width:160px;
+  }
+}
+.logout_btn {
+  color: $main_color;
+  border: 1px solid $main_color;
+  padding: 0.5rem;
+  margin: 0 auto 32px;
+  display: block;
+  border-radius: 4px;
+}
+.form_success {
+  font-size: 14px;
+  color:#7db621;
+  padding: 14px;
+  border:1px solid #A4D555;
+}
+
+#guest {
+  margin: 0;
+  background-color: $bg_color;
+  .header{
+    box-sizing: border-box;
+  }
+}
+.login_form {
+  background :$bg_color;
+  width: 90%;
+  height:auto;
+  margin:0 auto;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  padding:36px 24px;
+  box-sizing: border-box;
+  h2{
+    font-weight: bold;
+    text-align: center;
+    font-size: 20px;
+    margin-bottom: 24px;
+  }
+  input[type=text] ,
+  input[type=email] ,
+  input[type=password] {
+    background-color: #fff;
+    padding: 8px;
+    width: 100%;
+    margin-top:8px;
+    border:1px solid #ddd;
+  }
+  .form_item {
+    margin-bottom: 16px;
+  }
+  .green_btn {
+    width: 120px;
+    text-align:center;
+    margin: 0 auto 16px;
+    display: block;
+    transition: 0.2s;
+    cursor: pointer;
+  }
+  .forgot_pass {
+    font-size: 14px;
+    color: #666;
+  }
+  .remember_me {
+    font-size: 14px;
+    color: #666;
+  }
+  .login_link{
+    font-size: 14px;
+    color: #666;
+  }
+}
+.forgot_message {
+  margin-bottom: 32px;
+  line-height: 1.5;
+}
+.login_form .forgot_form .green_btn{
+  width: 100%;
+}
+
+.green_btn:hover{
+  background-color: #c5ed84;
+  transform: translate(0,4px);
+}
+
+
+//タブレット版デザイン
+@media screen and (min-width:768px) and ( max-width:1023px) {
+  main #timeline .log_link{
+    .icon {
+      width: 12%;
+    }
+   .text {
+    width:85%;
+  }
+}
+  #top {
+    .prof_img {
+      width: 72px;
+      height: 72px;
+    }
+  }
+  
+  #detail .comment_area .comment_form {
+    width:84%;
+  }
+  .login_form {
+    width: 440px;
+  }
+}
+
+@media screen and (min-width:1024px)  {
+  .header h1 {
+    width: 160px;
+  }
+  nav {
+    position: fixed;
+    left: 5%;
+    top: 100px;
+    width: 20%;
+    height: 280px;
+    padding: 2%;
+    ul {
+      display: block;
+    }
+  }
+  #top {
+     
+      width: 90%;
+    
+    .tabgroup {
+      padding-left: 25%;
+      .tabnav {
+        padding-right: 5%;
+        padding-left: 5%;
+      }
+      .tabcontent {
+        #my_log {
+          a{
+            display: block;
+          }
+        }
+        .log_list > li{
+          padding: 0;
+         a {
+          padding: 24px 5%;
+          transition: 0.3s;
+          border-radius: 4px;
+        }
+        a:hover{
+          background-color: #f0f0f0;
+        }
+      }
+      }
+    }
+    #like {
+      margin-bottom: 24px;
+      padding-right: 5%;
+    }
+  }
+
+  
+  #training {
+    width:90%;
+    padding-top: 100px;
+    .tabgroup .tabnav {
+      padding: 0 5%;
+    }
+    .wrapper {
+      padding-left: 25%;
+    }
+    .tabcontent-list {
+      padding: 16px 5%;
+    }
+    .type_name label {
+      cursor: pointer;
+    }
+  } 
+  #body {
+    width: 90%;
+    margin-top: 100px;
+    .wrapper {
+      padding-left: 25%;
+    }
+  }
+  #setting {
+    width:67%;
+    margin-top: 100px;
+    margin-left: 28%;
+    .wrapper {
+      padding-left: 0;
+    }
+  }
+  .login_form {
+    width: 512px;
+  }
+
+  .login_form .forgot_form .green_btn{
+    width: 80%;
+  }
+  .prof_img {
+    width: 80px;
+    height: 80px;
+  }
+  #detail {
+    width:90%;
+    padding: 0;
+    .wrapper {
+      padding-left: 25%;
+    }
+    .content .prof_img {
+      margin-right: 24px;
+    }
+    .comment_area .comment_form {
+      width: 84%;
+    }
+  }
+
+  #notification {
+    width: 90%;
+    .wrapper {
+      padding-left: 25%;
+    }
+  }
+  #like .like-button {
+    font-size: 14px;
+  }
+  main #timeline .log_link .log_user {
+    font-size: 18px;
+    margin-bottom: 20px;
+  }
+  main #timeline .log_link .log_user span {
+    font-size: 14px;
+  }
+  .new_log_link {
+    display: block!important;
+    animation: none;
+    width: auto;
+    height: auto;
+
+    .window_bg {
+      display: none;
+    }
+    .window_content {
+      padding: 0;
+      width: 20%;
+      position: fixed;
+      top:390px;
+      left: 5%;
+      background-color: #fff;
+      transform: translate(0%,0%);
+      .green_btn {
+        font-size: 14px;
+        transition: 0.2s;
+        border-radius: 64px;
+      }
+    }
+  }
+  .new_log {
+    display: none;
+  }
+  .encourage {
+    z-index: 25;
+  }
+  .new_log_link {
+    z-index: 21;
+  }
+  .notification {
+    bottom: 60px;
+    right: 40px;
+    z-index: 24;
+    transition: 0.2s;
+  }
+  #top nav {
+    z-index:22;
+  }
+  #setting {
+    z-index: 22;
+  }
+  .circle_link .green_btn {
+    transition: 0.2s;
+  }
+
+  .encourage .window_content {
+    padding-top:64px ;
+    padding-bottom: 64px;
+  }
+}
