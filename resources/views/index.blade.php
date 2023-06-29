@@ -92,7 +92,7 @@
                     @foreach($log->types as $type)
                     <li>
                       {{ $type->name }}
-                      {{ $type->pivot->weight != 0 ? $type->pivot->weight : ''}}kg
+                      {{ $type->pivot->weight != null ? $type->pivot->weight.'kg' : ''}}
                       {{ $type->pivot->count }}回
                       {{ $type->pivot->sets }}セット
                     </li>
@@ -149,7 +149,7 @@
                       <li>
                         {{ $type->name }}
                         {{ $type->pivot->weight != null ? $type->pivot->weight.'kg' : ''}}
-                        {{ $type->pivot->weight.'kg'}}
+                        {{--{{ $type->pivot->weight.'kg'}}--}}
                         {{ $type->pivot->count }}回
                         {{ $type->pivot->sets }}セット
                       </li>
