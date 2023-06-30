@@ -28,6 +28,7 @@ class IndexController extends Controller
         // $my_like = Like::where('user_id', $user->id)->where('log_id', $log->id)->exists();
 
         $like_counts = [];
+        $my_like = [];
         foreach($logs as $log) {
             $like_counts[$log->id] = $log->likes()->count();
             $my_like[$log->id] = $user ? Like::where('user_id', $user->id)->where('log_id', $log->id)->exists() : false ;
