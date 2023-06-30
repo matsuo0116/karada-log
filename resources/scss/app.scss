@@ -331,7 +331,7 @@ main{
 .new_log{
   bottom:100px;
   right: 20px;
-  z-index: 10;
+  z-index: 21;
 
 } 
 .new_log_link {
@@ -776,6 +776,12 @@ main{
   }
   .image_choice{
     width:100%;
+    margin:12px 0;
+  }
+  .setting_annotation {
+    line-height: 1.5;
+    color: #666;
+    font-size: 14px;
   }
 }
 #account {
@@ -815,7 +821,7 @@ main{
   left:0;
   transition: 0.2s;
   animation: modal-001-animation .6s;
-  z-index: 11;
+  z-index: 22;
   .window_bg {
     background: rgba(0,0,0,.6);
     position: absolute;
@@ -1060,6 +1066,7 @@ main{
     .wrapper {
       padding-left: 0;
     }
+    
   }
   .login_form {
     width: 512px;

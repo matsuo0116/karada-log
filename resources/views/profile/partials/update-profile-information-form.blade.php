@@ -4,7 +4,7 @@
             {{ __('Profile Information') }}
         </h2>
 
-        <p class="mt-1 text-sm text-gray-600">
+        <p class="setting_annotation">
             {{ __("Update your account's profile information and email address.") }}
         </p>
     </header>
