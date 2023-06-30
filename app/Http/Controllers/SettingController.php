@@ -25,7 +25,7 @@ class SettingController extends Controller
         $dir = 'uploads';
         if($request->file('image')){
             $file_name = $request->file('image')->getClientOriginalName();
-            $request->file('image')->storeAs('public/'.$dir, $file_name);
+            $request->file('image')->storeAs('public/'.$dir.'/', $file_name);
             $user = $request->user();
             $user->avatar = 'storage/'.$dir.'/'.$file_name;
             $user->save();

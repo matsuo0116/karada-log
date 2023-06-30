@@ -20,7 +20,6 @@
     
     <form action="{{ route('setting.upload') }}" enctype="multipart/form-data" method="post">
       @csrf
-      
       <input class="image_choice" type="file" name="image">
       <button class="green_btn">画像をアップロード</button>
       @error('image')
