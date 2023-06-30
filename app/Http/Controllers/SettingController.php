@@ -30,7 +30,6 @@ class SettingController extends Controller
             $user->avatar = 'storage/'.$dir.'/'.$file_name;
             $user->save();
         }
-
         return redirect('/setting');
     }
 

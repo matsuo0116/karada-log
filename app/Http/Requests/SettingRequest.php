@@ -22,7 +22,7 @@ class SettingRequest extends FormRequest
     public function rules(): array
     {
         return [
-            'image' => 'nullable | max:2000 | mimes: jpg,jpeg,png,gif',
+            'image' => 'nullable | max:5000 | mimes: jpg,jpeg,png,gif',
             'age' => ' nullable | integer | between:0,100',
             'height' => 'nullable | numeric | between:0,250',
             'target_fat' => 'nullable | numeric | between:0,99',
