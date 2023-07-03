@@ -113,9 +113,6 @@ class TrainingController extends Controller
         $last_week = Carbon::now()->subWeek();
         $today = Carbon::now()->endOfDay();
         $training_count = Log::whereBetWeen('created_at',[$last_week, $today])->where('user_id', $login_user->id)->count();
-        
-        // return redirect('/')->with('flash_message',$max_weight);
-        
 
         
         return redirect('/')->with('flash_message',

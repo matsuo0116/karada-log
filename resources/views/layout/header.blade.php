@@ -21,7 +21,7 @@
     
 
     
-    <h1><a href="{{ route('index') }}"><img src="/storage/uploads/header_logo.svg" alt="カラダログ"></a></h1>
+    <h1><a href="{{ route('index') }}"><img src="{{ asset('storage/image/header_logo.svg') }}" alt="カラダログ"></a></h1>
     @guest
       <div class="login_link"><a href="{{ route('login') }}">ログインする</a></div>
     @endguest
