@@ -12,9 +12,14 @@ class ShowController extends Controller
         $user = $request->user();
         $log = Log::find($id);
 
-        $my_like[$log->id] = $user ? Like::where('user_id', $user->id)->where('log_id', $log->id)->exists() : false ;
+        if($log) {
+            $my_like[$log->id] = $user ? Like::where('user_id', $user->id)->where('log_id', $log->id)->exists() : false ;
+            $like_counts = $log->likes()->count(); 
 
-        $like_counts = $log->likes()->count();      
-        return view('show', [ 'log' => $log, 'like_counts' => $like_counts, 'my_like' => $my_like ]);
+            return view('show', [ 'log' => $log, 'like_counts' => $like_counts, 'my_like' => $my_like ]);
+        } else {
+            return redirect()->route('index');
+        }
+        
     }
 }

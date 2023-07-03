@@ -1,6 +1,8 @@
 <?php
 
 namespace App\Http\Controllers;
+
+use Illuminate\Support\Facades\DB;
 use App\Models\Type;
 use App\Models\Category;
 use App\Models\Exercise;
@@ -110,10 +112,11 @@ class TrainingController extends Controller
         
         
         //今週のトレーニング回数を取得
-        $last_week = Carbon::now()->subWeek();
+        $last_week = Carbon::now()->startOfWeek(Carbon::SUNDAY);
         $today = Carbon::now()->endOfDay();
-        $training_count = Log::whereBetWeen('created_at',[$last_week, $today])->where('user_id', $login_user->id)->count();
-
+        $training_count = LogTypes::whereBetWeen('created_at',[$last_week, $today])
+        ->where('user_id', $login_user->id)
+        ->count(DB::raw('DISTINCT DATE(created_at)'));
         
         return redirect('/')->with('flash_message',
             [ 'training_count' => $training_count,
