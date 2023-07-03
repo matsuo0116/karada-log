@@ -15,6 +15,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@500&family=Noto+Sans+JP:wght@300;600&family=Noto+Serif&display=swap" rel="stylesheet">
+  <link rel="shortcut icon" href="{{ asset('storage/image/favicon.ico') }}">
 </head>
 <body>
   <header class="header">
