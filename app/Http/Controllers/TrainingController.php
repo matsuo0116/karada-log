@@ -112,7 +112,7 @@ class TrainingController extends Controller
         
         
         //今週のトレーニング回数を取得
-        $last_week = Carbon::now()->startOfWeek(Carbon::SUNDAY);
+        $last_week = Carbon::now()->startOfWeek();
         $today = Carbon::now()->endOfDay();
         $training_count = LogTypes::whereBetWeen('created_at',[$last_week, $today])
         ->where('user_id', $login_user->id)
