@@ -17,6 +17,7 @@
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@500&family=Noto+Sans+JP:wght@300;600&family=Noto+Serif&display=swap" rel="stylesheet">
         @vite(['resources/scss/app.scss', 'resources/js/app.js'])
+        <link rel="shortcut icon" href="{{ asset('storage/image/favicon.ico') }}">
     </head>
     <body id="guest" class="font-sans text-gray-900 antialiased ">
     <header class="header">
