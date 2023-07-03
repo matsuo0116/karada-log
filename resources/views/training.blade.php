@@ -45,13 +45,13 @@
                 </p>
                 <div class="form_item_list  {{ old('log.'.$type->id.'.num') ? 'open' : '' }}" id="text_form{{ $type->id }}">
                   <div class="form_item">
-                    <input type="text" name="log[{{ $type->id }}][weight]" value="{{ old('log.'.$type->id.'.weight') }}"><span>kg</span>
+                    <input type="number" name="log[{{ $type->id }}][weight]" value="{{ old('log.'.$type->id.'.weight') }}"><span>kg</span>
                   </div>
                   <div class="form_item">
-                    <input type="text" name="log[{{ $type->id }}][count]" value="{{ old('log.'.$type->id.'.count') }}"><span>回</span>
+                    <input type="number" name="log[{{ $type->id }}][count]" value="{{ old('log.'.$type->id.'.count') }}"><span>回</span>
                   </div>
                   <div class="form_item">
-                    <input type="text" name="log[{{ $type->id }}][sets]" value="{{ old('log.'.$type->id.'.sets') }}"><span>セット</span>
+                    <input type="number" name="log[{{ $type->id }}][sets]" value="{{ old('log.'.$type->id.'.sets') }}"><span>セット</span>
                   </div>
                 </div>
                 @endif
@@ -76,10 +76,10 @@
                 </p>
                 <div class="form_item_list {{ old('log.'.$type->id.'.num') ? 'open' : '' }}" id="text_form{{ $type->id }}">
                   <div class="form_item">
-                    <input type="text" name="log[{{ $type->id }}][count]" value="{{ old('log.'.$type->id.'.count') }}">回
+                    <input type="number" name="log[{{ $type->id }}][count]" value="{{ old('log.'.$type->id.'.count') }}">回
                   </div>
                   <div class="form_item">
-                    <input type="text" name="log[{{ $type->id }}][sets]" value="{{ old('log.'.$type->id.'.sets') }}">セット
+                    <input type="number" name="log[{{ $type->id }}][sets]" value="{{ old('log.'.$type->id.'.sets') }}">セット
                   </div>
                 </div>
                 @endif
@@ -100,10 +100,10 @@
               </p>
               <div class="form_item_list {{ old('exercise.'.$type->id.'.num') ? 'open' : '' }}" id="text_form{{ $type->id }}">
                 <div class="form_item">
-                  <input type="text" name="exercise[{{ $type->id }}][time]" value="{{ old('exercise.'.$type->id.'.time') }}">分
+                  <input type="number" name="exercise[{{ $type->id }}][time]" value="{{ old('exercise.'.$type->id.'.time') }}">分
                 </div>
                 <div class="form_item">
-                  <input type="text" name="exercise[{{ $type->id }}][distance]" value="{{ old('exercise.'.$type->id.'.distance') }}">km
+                  <input type="number" name="exercise[{{ $type->id }}][distance]" value="{{ old('exercise.'.$type->id.'.distance') }}">km
                 </div>
               </div>
               @endif
