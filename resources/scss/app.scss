@@ -537,7 +537,7 @@ main{
   .form_item{
     display: flex;
     align-items: center;
-    margin-left: 16px;
+    margin-left: 12px;
     input{
       width: 56px;
       font-size: 18px;
@@ -545,6 +545,9 @@ main{
       text-align: right;
       display: flex;
       margin-right: 4px;
+    }
+    .input_weight {
+      width: 72px;
     }
     span{
       font-size: 12px;
@@ -986,6 +989,16 @@ main{
 }
 
 @media screen and (min-width:1024px)  {
+  input[type="number"]::-webkit-outer-spin-button, 
+  input[type="number"]::-webkit-inner-spin-button { 
+    -webkit-appearance: none; 
+    margin: 0; 
+  } 
+  input[type="number"] { 
+    -moz-appearance:textfield; 
+  } 
+  
+
   .header h1 {
     width: 160px;
   }
@@ -1164,4 +1177,9 @@ main{
     padding-top:64px ;
     padding-bottom: 64px;
   }
+  .info_list p {
+    width:150px ;
+  }
+
+
 }

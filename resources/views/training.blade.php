@@ -45,7 +45,7 @@
                 </p>
                 <div class="form_item_list  {{ old('log.'.$type->id.'.num') ? 'open' : '' }}" id="text_form{{ $type->id }}">
                   <div class="form_item">
-                    <input type="number" name="log[{{ $type->id }}][weight]" value="{{ old('log.'.$type->id.'.weight') }}"><span>kg</span>
+                    <input type="number" class="input_weight" step="0.01" name="log[{{ $type->id }}][weight]" value="{{ old('log.'.$type->id.'.weight') }}"><span>kg</span>
                   </div>
                   <div class="form_item">
                     <input type="number" name="log[{{ $type->id }}][count]" value="{{ old('log.'.$type->id.'.count') }}"><span>回</span>
@@ -103,7 +103,7 @@
                   <input type="number" name="exercise[{{ $type->id }}][time]" value="{{ old('exercise.'.$type->id.'.time') }}">分
                 </div>
                 <div class="form_item">
-                  <input type="number" name="exercise[{{ $type->id }}][distance]" value="{{ old('exercise.'.$type->id.'.distance') }}">km
+                  <input type="number" step="0.1" name="exercise[{{ $type->id }}][distance]" value="{{ old('exercise.'.$type->id.'.distance') }}">km
                 </div>
               </div>
               @endif

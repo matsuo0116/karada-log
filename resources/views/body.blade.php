@@ -39,7 +39,7 @@
         <h3>記録</h3>
         <p class="log_form">
           体重
-          <input type="number" name="weight" value="{{ ($log->weight == 0 ) ? '' : $log->weight }}">
+          <input type="number" step="0.1" name="weight" value="{{ ($log->weight == 0 ) ? '' : $log->weight }}">
           <span class="unit">kg</span>
 
         </p>
@@ -49,7 +49,7 @@
           @enderror
         <p class="log_form">
           体脂肪
-          <input type="number" name="fat_per" value="{{ ($log->fat_per == 0 ) ? '' : $log->fat_per }}">
+          <input type="number" step="0.1" name="fat_per" value="{{ ($log->fat_per == 0 ) ? '' : $log->fat_per }}">
           <span class="unit">%</span>
           
 
