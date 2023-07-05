@@ -9,7 +9,7 @@
 
         <!-- Email Address -->
         <div class="form_item">
-            <x-input-error :messages="$errors->get('email')" class="mt-2" />
+            <x-input-error :messages="$errors->get('email')" class="mt-2 error_message" style="margin-bottom:16px;" />
             <x-input-label for="email" :value="__('メールアドレス')" />
             <x-text-input id="email" class="block mt-1 w-full" type="email" name="email" :value="old('email')" required autofocus autocomplete="username" />
             

@@ -898,6 +898,10 @@ main{
   .header{
     box-sizing: border-box;
   }
+
+  .error_message {
+    width: 100%;
+  }
 }
 .login_form {
   background :$bg_color;
