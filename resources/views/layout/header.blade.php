@@ -5,6 +5,11 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name=”description” content=”カラダログは、毎日のトレーニングと体の記録と管理を楽にするWebサービスです。今日から理想の体に近づけるよう一緒に頑張りましょう。日々のトレーニングと体の変化を記録しましょう！”>
+
+  <meta property="og:url" content="https://karada-log.com/">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="{{ asset('storage/image/twitter_ogp.png') }}">
+  <meta property="og:title" content="カラダログ">
   <link rel="stylesheet" href="/css/reset.css">
   <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
