@@ -400,7 +400,10 @@ main{
     margin-bottom: 16px;
     border-bottom: 1px solid #ccc;
     padding-bottom: 16px;
-
+    
+    .content_detail {
+      width: calc(100% - 64px);
+    }
     .icon {
       margin-right:8px;
     }

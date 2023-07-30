@@ -14,7 +14,7 @@
       <img class="prof_img" src="{{ asset($log->user->avatar) }}" alt="">
       @endif
     </div>
-    <div>
+    <div class="content_detail">
       <h2 class="user_name">
         <p>{{ $log->user->name }}</p>
       </h2>
